@@ -1,0 +1,14 @@
+# Bu bir Ansible envanter (hosts) örnek dosyasıdır.
+# Bu dosyayı /etc/ansible/hosts olarak kopyalayın
+# ve IP adreslerini kendi sunucularınızla değiştirin.
+
+[webservers]
+# MASTER Rolü (Patron)
+192.168.1.10     ansible_user=kullaniciadi     rol=master
+
+# BACKUP Rolü (Yedek)
+192.168.1.11     ansible_user=kullaniciadi     rol=backup
+
+[all:vars]
+# Kullanacağınız Sanal IP
+virtual_ip = 192.168.1.100
